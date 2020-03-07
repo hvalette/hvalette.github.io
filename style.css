@@ -71,8 +71,9 @@ body {
 }
 
 .picture img {
-    border: 6px solid var(--color-dark);
-    transition: filter 1s;
+    border: 1px solid var(--color-dark);
+    box-shadow: 10px 10px 0px 0px var(--color-dark);
+    transition: filter 1s, box-shadow 0.5s, transform 0.5s;
     width: 40%;
     filter: grayscale(100%);
     animation: 0.75s ease-in pop;
@@ -80,6 +81,8 @@ body {
 
 .picture img:hover {
     filter: grayscale(0%) !important;
+    box-shadow: 5px 5px 0px 0px var(--color-dark);
+    transform: scale(0.99);
 }
 
 @keyframes grow{
