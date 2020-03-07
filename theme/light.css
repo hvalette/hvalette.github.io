@@ -1,0 +1,8 @@
+body {
+    --background: #FED104;
+    --color-accent: #E94F37;
+    --background-gradient: radial-gradient(circle, var(--background) 0%, var(--background-tint) 100%);
+    --color-dark: #0C090D;
+    --color-light: #FDFDFD;
+    --color-medium: #636363
+}  

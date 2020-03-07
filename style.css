@@ -1,0 +1,118 @@
+@import url('theme/light.css');
+@import url('theme/dark.css');
+
+@import url('https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Spectral&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+.profile {
+    height: 100vh;
+    background: var(--background);
+}
+
+.profile .container {
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile .container .name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile .container .name>div{
+    position: relative;
+    padding: 1% 1% 0% 1%;
+    margin: 1%;
+    z-index: 1;
+}
+
+.text{
+    color: var(--color-light);
+    font-size: 2em;
+    font-weight: 900;
+    animation: 0.5s ease-in-out fade-in;
+}
+
+.text .letter {
+    color: var(--color-accent);
+}
+
+.highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--color-dark);
+    animation: 0.25s ease-in-out forwards grow;
+    z-index: -1;
+}
+
+.quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 200;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture img {
+    border: 6px solid var(--color-dark);
+    transition: filter 1s;
+    width: 40%;
+    filter: grayscale(100%);
+    animation: 0.75s ease-in pop;
+}
+
+.picture img:hover {
+    filter: grayscale(0%) !important;
+}
+
+@keyframes grow{
+    0% {
+        width: 0%;
+    }
+    90% {
+        width: 110%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        filter: grayscale(100%) blur(4px);
+    }
+    100% {
+        opacity: 1;
+        filter: grayscale(100%) blur(0px);
+    }
+}
